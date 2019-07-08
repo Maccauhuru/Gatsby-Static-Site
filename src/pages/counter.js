@@ -9,15 +9,16 @@ class counter extends Component {
         }
     }
     render() {
+        let { count } = this.state;
         return (
-            <div>
+            <div style={{ color: this.props.color }}>
                 <h1>Counter App</h1>
-                <p>Current Count :{this.state.count}</p>
+                <p>Current Count :{count}</p>
                 <button onClick={() => this.setState({
-                    count: this.state.count + 1
+                    count: count + 1
                 })}>plus</button>
                 <button onClick={() => this.setState({
-                    count: this.state.count - 1
+                    count: count - 1
                 })}>minus</button>
                 <br />
                 <Link to="/">Home</Link>
